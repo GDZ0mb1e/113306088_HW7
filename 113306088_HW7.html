@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Profile</title>
+  <style>
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+      min-height: 100vh;
+    }
+
+    .main-container {
+      display: grid;
+      grid-template-columns: 330px 540px;
+      max-width: 900px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .left-panel {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .left-panel img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .left-panel h1 {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .left-panel p {
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .left-panel .contact {
+      margin-top: 20px;
+    }
+
+    .right-panel {
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column; 
+    }
+
+    .right-panel h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .right-panel .section {
+      margin-bottom: 20px;
+    }
+
+    .right-panel ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .right-panel ul li {
+      margin-bottom: 8px;
+    }
+
+    .right-panel ul li a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .right-panel ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .music-item img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 5px;
+    }
+
+    .favorite-music {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+    .music-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .profile-header h1 {
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .profile-header button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .profile-header button:hover {
+      background-color: #0056b3;
+    }
+
+    .music-form {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .music-form input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .music-form button {
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .music-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .warning {
+      color: red;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+<div class="main-container">
+    <div class="left-panel">
+      <img src="123.jpg" alt="Profile Picture">
+      <div class="profile-header">
+        <h1 id="name-display">Sean</h1>
+        <button id="edit-name-btn">Edit</button>
+      </div>
+      <p>I am a freshman in the Department of Management Information Systems at National Chengchi University. I am very interested in programming, but I always gets very lazy and do nothing. I have experience in writing Java, HTML, C++, but I only remember java. I literally forgot all of it.</p>
+      <div class="contact">
+        <h3>CONTACT</h3>
+        <p>youremail@media.com</p>
+        <img src="logo_nccu.png">
+      </div>
+    </div>
+    <div class="right-panel">
+      <div class="section">
+        <h2>Education</h2>
+        <ul>
+          <li>2024 - National Chengchi University, Department of MIS</li>
+          <li>2021 - Super idol of Myself</li>
+          <li>2018 - Legendary Kid</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Homework List</h2>
+        <ul>
+          <li>HW1 -  <a href="https://github.com/GDZ0mb1e/HW1.git" target="_blank">https://github.com/GDZ0mb1e/HW1.git</a></li>
+          <li>HW2 -  <a href="https://github.com/GDZ0mb1e/HW2.git" target="_blank">https://github.com/GDZ0mb1e/HW2.git</a></li>
+          <li>HW3 -  <a href="https://github.com/GDZ0mb1e/HW3.git" target="_blank">https://github.com/GDZ0mb1e/HW3.git</a></li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Favorite Music</h2>
+        <div class="favorite-music" id="favorite-music">
+          <div class="music-item">
+            <a href = "https://www.youtube.com/watch?v=wrpRv1pyV6I&list=PLXTE5dNAKMkX8IhT-U1_ZtY3bYdTJp8uR&index=9&ab_channel=Kiranime"><img src="spotify.png"></a>
+            <p>There is a reason</p>
+          </div>
+          <div class="music-item">
+            <a href = "https://www.youtube.com/watch?v=fRQtDjiRtI8&ab_channel=SonyMusic%28Japan%29"><img src="spotify.png"></a>
+            <p>Secret base</p>
+          </div>
+        </div>
+        <button id="add-music-btn">Add Music</button>
+        <div class="music-form" id="music-form">
+          <input type="text" id="music-link" placeholder="Music Link">
+          <input type="text" id="music-name" placeholder="Music Name">
+          <button id="submit-music-btn">Submit</button>
+          <p class="warning" id="warning-message"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+const editNameBtn = document.getElementById('edit-name-btn');
+const nameDisplay = document.getElementById('name-display');
+
+editNameBtn.addEventListener('click', () => {
+  if (editNameBtn.textContent === 'Edit') {
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.value = nameDisplay.textContent;
+    nameInput.id = 'name-input';
+    nameDisplay.replaceWith(nameInput);
+    editNameBtn.textContent = 'Save';
+  } else {
+    const nameInput = document.getElementById('name-input');
+    const newName = nameInput.value.trim();
+    if (newName) {
+      nameDisplay.textContent = newName;
+      nameInput.replaceWith(nameDisplay);
+      editNameBtn.textContent = 'Edit';
+    }
+  }
+});
+
+// Add music functionality
+const addMusicBtn = document.getElementById('add-music-btn');
+const musicForm = document.getElementById('music-form');
+const submitMusicBtn = document.getElementById('submit-music-btn');
+const warningMessage = document.getElementById('warning-message');
+const favoriteMusic = document.getElementById('favorite-music');
+
+addMusicBtn.addEventListener('click', () => {
+  musicForm.style.display = 'flex';
+});
+
+submitMusicBtn.addEventListener('click', () => {
+  const musicLink = document.getElementById('music-link').value.trim();
+  const musicName = document.getElementById('music-name').value.trim();
+
+  if (!musicLink || !musicName) {
+    warningMessage.textContent = 'Please fill in both fields.';
+    return;
+  }
+
+  warningMessage.textContent = '';
+
+  const musicItem = document.createElement('div');
+  musicItem.className = 'music-item';
+
+  const musicAnchor = document.createElement('a');
+  musicAnchor.href = musicLink;
+  musicAnchor.target = '_blank';
+
+  const musicImage = document.createElement('img');
+  musicImage.src = 'spotify.png';
+  musicAnchor.appendChild(musicImage);
+
+  const musicText = document.createElement('p');
+  musicText.textContent = musicName;
+
+  musicItem.appendChild(musicAnchor);
+  musicItem.appendChild(musicText);
+  favoriteMusic.appendChild(musicItem);
+
+  musicForm.style.display = 'none';
+  document.getElementById('music-link').value = '';
+  document.getElementById('music-name').value = '';
+});
+
+  </script>
+</body>
+</html>
